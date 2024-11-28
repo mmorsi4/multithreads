@@ -14,16 +14,16 @@ import javafx.scene.shape.*;
 import javafx.scene.text.*;
 import javafx.scene.paint.*;
 
-public class App extends Application {
+public class CategoryPage extends Application {
 
     @Override
     public void start(Stage stage){
 
-        stage.setMaximized(true);
-        //stage.setFullScreen(true);
+        //stage.setMaximized(true);
+        stage.setFullScreen(true);
+        stage.setFullScreenExitHint("");
         //stage.setResizable(false);
         //stage.setIconified(false);
-
         
         Font HM = Font.loadFont(getClass().getResourceAsStream("/fonts/HM.ttf"), 26);
 
@@ -158,7 +158,7 @@ public class App extends Application {
 
         productButton.setCursor(Cursor.HAND);
         productButton.setOnMouseClicked(event -> {
-            System.out.println("Clicked on m!"); // Replace with desired action
+            ProductPage productpage = new ProductPage(stage);
         });
 
         cartButton.setCursor(Cursor.HAND);
