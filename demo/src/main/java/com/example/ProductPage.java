@@ -3,6 +3,7 @@ package com.example;
 import java.util.Stack;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.geometry.*;
 import javafx.scene.Cursor;
 import javafx.scene.Scene;
@@ -10,21 +11,29 @@ import javafx.stage.Stage;
 import javafx.scene.control.*;
 import javafx.scene.image.*;
 import javafx.scene.layout.*;
-import javafx.scene.shape.*;
 import javafx.scene.text.*;
-import javafx.scene.paint.*;
 
 public class ProductPage {
 
-    BorderPane bp = new BorderPane();
-    Scene productScene = new Scene(bp);
+    private final Central mainApp;
 
-    public ProductPage(Stage stage) {
+    public ProductPage(Central mainApp) {
+        this.mainApp = mainApp;
+    }
+
+    public Scene getScene(Stage stage){
+
+        // USE THESE LINES FOR EVERY NEW SCROLLABLE PAGE
+        BorderPane bp = new BorderPane();
+        ScrollPane sp = new ScrollPane(bp);
+        sp.setFitToWidth(true);
+
         bp.setStyle("-fx-background-color: black;");
 
-        stage.setScene(productScene);
-        stage.setFullScreen(true);
-        stage.setFullScreenExitHint("");
+        // FORCE REFRESH AFTER PAGE TRANSITION
+        //Platform.runLater(stage::sizeToScene); 
+
+        // nav
 
         // nav
 
@@ -54,16 +63,16 @@ public class ProductPage {
 
         productButton.setCursor(Cursor.HAND);
         productButton.setOnMouseClicked(event -> {
-            ProductPage productpage = new ProductPage(stage);
-        });
-
-        cartButton.setCursor(Cursor.HAND);
-        cartButton.setOnMouseClicked(event -> {
-            System.out.println("Clicked on m!"); // Replace with desired action
+            mainApp.showProductPage();
         });
 
         categoryButton.setCursor(Cursor.HAND);
         categoryButton.setOnMouseClicked(event -> {
+            mainApp.showCategoryPage();
+        });
+
+        cartButton.setCursor(Cursor.HAND);
+        cartButton.setOnMouseClicked(event -> {
             System.out.println("Clicked on m!"); // Replace with desired action
         });
 
@@ -104,6 +113,8 @@ public class ProductPage {
         controlBar.getChildren().addAll(searchBar, categoryComboBox, sortByComboBox);
         mainLayout.getChildren().addAll(controlBar, productGrid);
         bp.setCenter(mainLayout);
+
+        return new Scene(sp, 1366, 768);
 
         // Rectangle roundrec = new Rectangle(200, 200);
         // roundrec.setFill(Color.TRANSPARENT);

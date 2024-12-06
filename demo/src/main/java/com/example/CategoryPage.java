@@ -14,19 +14,16 @@ import javafx.scene.shape.*;
 import javafx.scene.text.*;
 import javafx.scene.paint.*;
 
-public class CategoryPage extends Application {
+public class CategoryPage {
 
-    @Override
-    public void start(Stage stage){
+    private final Central mainApp;
 
-        //stage.setMaximized(true);
-        stage.setFullScreen(true);
-        stage.setFullScreenExitHint("");
-        //stage.setResizable(false);
-        //stage.setIconified(false);
-        
+    public CategoryPage(Central mainApp) {
+        this.mainApp = mainApp;
+    }
+
+    public Scene getScene(Stage stage){
         Font HM = Font.loadFont(getClass().getResourceAsStream("/fonts/HM.ttf"), 26);
-
         BorderPane bp = new BorderPane();
         bp.setStyle("-fx-background-color: black;");
 
@@ -55,6 +52,21 @@ public class CategoryPage extends Application {
         navbar.setPadding(new Insets(15, 15, 15, 15));
 
         bp.setTop(navbar);
+
+        productButton.setCursor(Cursor.HAND);
+        productButton.setOnMouseClicked(event -> {
+            mainApp.showProductPage();
+        });
+
+        categoryButton.setCursor(Cursor.HAND);
+        categoryButton.setOnMouseClicked(event -> {
+            mainApp.showCategoryPage();
+        });
+
+        cartButton.setCursor(Cursor.HAND);
+        cartButton.setOnMouseClicked(event -> {
+            System.out.println("Clicked on m!"); // Replace with desired action
+        });
 
         // content
 
@@ -156,33 +168,10 @@ public class CategoryPage extends Application {
             System.out.println("Clicked on m!"); // Replace with desired action
         });
 
-        productButton.setCursor(Cursor.HAND);
-        productButton.setOnMouseClicked(event -> {
-            ProductPage productpage = new ProductPage(stage);
-        });
-
-        cartButton.setCursor(Cursor.HAND);
-        cartButton.setOnMouseClicked(event -> {
-            System.out.println("Clicked on m!"); // Replace with desired action
-        });
-
-        categoryButton.setCursor(Cursor.HAND);
-        categoryButton.setOnMouseClicked(event -> {
-            System.out.println("Clicked on m!"); // Replace with desired action
-        });
-
         
         //
 
-        Scene scene = new Scene(bp); 
-        stage.setTitle("Prototype");
-        stage.setScene(scene);
-
-        stage.show();
-    }
-
-    public static void main(String[] args) {
-        launch();
+        return new Scene(bp, 1366, 768);
     }
 
 }
