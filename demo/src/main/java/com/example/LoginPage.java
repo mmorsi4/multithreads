@@ -61,8 +61,8 @@ public class LoginPage {
         VBox.setMargin(usernameLabel, new Insets(0, 0, 5, 0));
         VBox.setMargin(passwordLabel, new Insets(10, 0, 5, 0));
 
-        Text warning = new Text("Invalid Credentials!");
-        warning.setFill(Color.BLACK);
+        Text warning = new Text("");
+        warning.setFill(Color.RED);
 
         VBox.setMargin(warning, new Insets(5, 0, 10, 0));
 
@@ -73,7 +73,7 @@ public class LoginPage {
             if (username.equals("admin") && password.equals("1234")) { // CHECK IN DATABASE
                 mainApp.showCategoryPage();
             } else { // ERROR
-                warning.setFill(Color.RED);
+                warning.setText("Invalid Credentials");
             }
         });
 

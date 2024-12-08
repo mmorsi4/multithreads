@@ -12,9 +12,11 @@ import javafx.stage.Stage;
 
 public class SelectProductPage {
     private final Central mainApp;
+    private static boolean ProductorCart;
 
-    public SelectProductPage(Central mainApp) {
+    public SelectProductPage(Central mainApp, boolean check) {
         this.mainApp = mainApp;
+        ProductorCart = check;
     }
 
     public Scene getScene(Stage stage) {
@@ -23,35 +25,72 @@ public class SelectProductPage {
         BorderPane bp = new BorderPane();
         bp.setStyle("-fx-background-color: black;");
 
+        // nav
+
         Image logo = new Image(getClass().getResource("/assets/multithreadsLogo.png").toExternalForm());
         ImageView logoView = new ImageView(logo);
         logoView.setFitWidth(85);
         logoView.setPreserveRatio(true);
 
-        Button cartButton = new Button("CART");
-        cartButton.setStyle("-fx-background-color: transparent; -fx-font-size: 16px; -fx-text-fill: white; -fx-border-color: transparent;");
-        Button productButton = new Button("PRODUCTS");
-        productButton.setStyle("-fx-background-color: transparent; -fx-font-size: 16px; -fx-text-fill: white; -fx-border-color: transparent;");
-        Button categoryButton = new Button("CATEGORIES");
-        categoryButton.setStyle("-fx-background-color: transparent; -fx-font-size: 16px; -fx-text-fill: white; -fx-border-color: transparent;");
+        Text cartButton = new Text("CART");
+        cartButton.setFill(Color.WHITE);
+        cartButton.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
 
-        HBox controlBox = new HBox(25);
+        Text productButton = new Text("PRODUCTS");
+        productButton.setFill(Color.WHITE);
+        productButton.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
+
+        Text categoryButton = new Text("CATEGORIES");
+        categoryButton.setFill(Color.WHITE);
+        categoryButton.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
+
+        Text ordersButton = new Text("ORDERS");
+        ordersButton.setFill(Color.WHITE);
+        ordersButton.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
+
+        HBox controlBox = new HBox(40);
         controlBox.setAlignment(Pos.CENTER);
-        controlBox.getChildren().addAll(productButton, categoryButton, cartButton);
+        controlBox.getChildren().addAll(productButton, categoryButton, cartButton, ordersButton);
 
         HBox navbar = new HBox(50);
         navbar.getChildren().addAll(logoView, controlBox);
-        navbar.setStyle("-fx-background-color: rgba(20, 20, 20, 1)");
+        navbar.setStyle("-fx-background-color: black;");
         navbar.setAlignment(Pos.CENTER_LEFT);
         navbar.setPadding(new Insets(15, 15, 15, 15));
-        bp.setTop(navbar);
+
+        Image navbarDeco = new Image(getClass().getResource("/assets/navDeco.png").toExternalForm());
+        ImageView navbarDecoView = new ImageView(navbarDeco);
+        VBox barAndDeco = new VBox();
+        barAndDeco.getChildren().addAll(navbar, navbarDecoView);
+
+        bp.setTop(barAndDeco);
 
         productButton.setCursor(Cursor.HAND);
-        productButton.setOnMouseClicked(event -> mainApp.showProductPage());
+        productButton.setOnMouseClicked(event -> {
+            mainApp.showProductPage();
+        });
+
         categoryButton.setCursor(Cursor.HAND);
-        categoryButton.setOnMouseClicked(event -> mainApp.showCategoryPage());
+        categoryButton.setOnMouseClicked(event -> {
+            mainApp.showCategoryPage();
+        });
+
         cartButton.setCursor(Cursor.HAND);
-        cartButton.setOnMouseClicked(event -> System.out.println("Clicked on CART!"));
+        cartButton.setOnMouseClicked(event -> {
+            mainApp.showCartPage();
+        });
+
+        ordersButton.setCursor(Cursor.HAND);
+        ordersButton.setOnMouseClicked(event -> {
+            mainApp.showOrdersPage();
+        });
+
+        logoView.setCursor(Cursor.HAND);
+        logoView.setOnMouseClicked(event -> {
+            mainApp.showLoginPage();
+        });
+
+        // content
 
         // Return Button as an Image
         Image returnImage = new Image(getClass().getResource("/assets/back-button.png").toExternalForm());
@@ -63,7 +102,10 @@ public class SelectProductPage {
         returnButton.setGraphic(returnImageView);
         returnButton.setStyle("-fx-background-color: transparent;");
         returnButton.setCursor(Cursor.HAND);
-        returnButton.setOnAction(e -> mainApp.showProductPage()); // Replace with actual navigation logic
+        returnButton.setOnAction(e -> {
+            if(ProductorCart == false) mainApp.showProductPage();
+            else mainApp.showCartPage();
+        });
 
         StackPane stackPane = new StackPane();
         stackPane.getChildren().add(bp);

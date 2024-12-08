@@ -14,11 +14,11 @@ import javafx.scene.layout.*;
 import javafx.scene.text.*;
 import javafx.scene.paint.*;
 
-public class ProductPage {
+public class CartPage {
 
     private final Central mainApp;
 
-    public ProductPage(Central mainApp) {
+    public CartPage(Central mainApp) {
         this.mainApp = mainApp;
     }
 
@@ -141,6 +141,52 @@ public class ProductPage {
         mainLayout.getChildren().addAll(controlBar, productGrid);
         bp.setCenter(mainLayout);
 
+        // Add "Order" button and payment method dropdown at the bottom
+        HBox orderSection = new HBox(20);
+        orderSection.setAlignment(Pos.BOTTOM_RIGHT);
+        orderSection.setPadding(new Insets(30, 30, 30, 30)); // Padding at the bottom
+
+        // Validation
+        Text warning = new Text("");
+        warning.setFill(Color.RED);
+
+        // Payment method dropdown
+        ComboBox<String> paymentMethodComboBox = new ComboBox<>();
+        paymentMethodComboBox.setMaxWidth(200);
+        paymentMethodComboBox.getItems().addAll("Cash", "Debit", "Credit", "Bank");
+        paymentMethodComboBox.setValue("Select Payment Method.."); // default option
+
+        // "Order" Button
+        Button orderButton = new Button("Order");
+        orderButton.setStyle("-fx-background-color: #28a745; -fx-text-fill: white; -fx-border-radius: 10px; -fx-padding: 10px; -fx-font-size: 16px;");
+        orderButton.setCursor(Cursor.HAND);
+        orderButton.setOnMouseClicked(event -> {
+            if(paymentMethodComboBox.getValue() == "Select Payment Method.."){
+                warning.setText("Please select a payment method!");
+            }
+            else if(false){
+                // add to condition in case the cart is empty
+                warning.setText("Cart is empty!");
+            }
+            else{
+                // code to finalize order and reset cart
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeight(600);
+                alert.setTitle("Order Confirmation");
+                alert.setHeaderText("ORDER ID: " + 0);
+                alert.setContentText("Your order has been placed successfully.\n" + "\nYou can expect your items to be shipped within the next 2-3 business days.");
+                warning.setText("");
+                alert.showAndWait();
+                mainApp.showCategoryPage();
+            }
+        });
+
+        orderSection.getChildren().addAll(warning, paymentMethodComboBox, orderButton);
+
+        // Add order section to the bottom of the page
+        bp.setBottom(orderSection);
+
         return new Scene(sp, 1366, 768);
 
     }
@@ -158,15 +204,28 @@ public class ProductPage {
         Label priceLabel = new Label(productPrice + "EGP");
         priceLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 14));
 
+        HBox buttonLine = new HBox(10);
+        buttonLine.setAlignment(Pos.CENTER);
+
         Button showProductButton = new Button("Show Product");
         showProductButton.setCursor(Cursor.HAND);
         showProductButton.setOnMouseClicked(e -> {
-            mainApp.showSelectProductPage(false);
+            mainApp.showSelectProductPage(true);
         });
         showProductButton.setStyle("-fx-background-color: #006fff; -fx-text-fill: white; -fx-border-radius: 10px; -fx-padding: 10px; -fx-font-size: 14px;");
 
-        VBox productBox = new VBox(10, productImageView, nameLabel, priceLabel, showProductButton);
+        Button removeButton = new Button("Remove");
+        removeButton.setCursor(Cursor.HAND);
+        removeButton.setStyle("-fx-background-color: #ff0000; -fx-text-fill: white; -fx-border-radius: 10px; -fx-padding: 10px; -fx-font-size: 14px;");
+
+        buttonLine.getChildren().addAll(showProductButton, removeButton);
+        VBox productBox = new VBox(10, productImageView, nameLabel, priceLabel, buttonLine);
         productBox.setAlignment(Pos.CENTER);
+
+        removeButton.setOnMouseClicked(e -> {
+            grid.getChildren().remove(productBox);
+            // remove from arraylist
+        });
 
         grid.getChildren().add(productBox);
         FlowPane.setMargin(productBox, new Insets(0, 0, 50, 0));

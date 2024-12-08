@@ -20,7 +20,8 @@ public class Central extends Application {
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
-        showSelectProductPage(); // Start with Scene 1
+        primaryStage.setResizable(false);
+        showLoginPage(); // Start with Scene 1
         primaryStage.setTitle("Multithreads");
         primaryStage.show();
     }
@@ -45,9 +46,41 @@ public class Central extends Application {
         primaryStage.setScene(productPage.getScene(primaryStage));
     }
 
-    public void showSelectProductPage() {
-        SelectProductPage selectProductPage = new SelectProductPage(this);
+    public void showSelectProductPage(boolean check) {
+        SelectProductPage selectProductPage = new SelectProductPage(this, check);
         primaryStage.setScene(selectProductPage.getScene(primaryStage));
+    }
+
+    public void showCartPage(){
+        CartPage cartPage = new CartPage(this);
+        primaryStage.setScene((cartPage.getScene(primaryStage)));
+    }
+
+    public void showOrdersPage(){
+        OrdersPage ordersPage = new OrdersPage(this);
+        primaryStage.setScene((ordersPage.getScene(primaryStage)));
+    }
+
+    // Admin pages
+
+    public void showAdminProductsPage() {
+        AdminProductsPage adminProductsPage = new AdminProductsPage(this);
+        primaryStage.setScene(adminProductsPage.getScene(primaryStage));
+    }
+    
+    public void showAdminCategoriesPage() {
+        AdminCategoriesPage adminCategoriesPage = new AdminCategoriesPage(this);
+        primaryStage.setScene(adminCategoriesPage.getScene(primaryStage));
+    }
+    
+    public void showAdminUsersPage() {
+        AdminUsersPage adminUsersPage = new AdminUsersPage(this);
+        primaryStage.setScene(adminUsersPage.getScene(primaryStage));
+    }
+    
+    public void showAdminOrdersPage() {
+        AdminOrdersPage adminOrdersPage = new AdminOrdersPage(this);
+        primaryStage.setScene(adminOrdersPage.getScene(primaryStage));
     }
 
     public static void main(String[] args) {
