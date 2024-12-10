@@ -1,0 +1,18 @@
+[
+    {
+        "role": "superadmin",
+        "actions": ["admins_create","admins_update","admins_retrieve","admins_delete","customers_create","customers_update","customers_retrieve","customers_delete","products_create","products_update","products_retrieve","products_delete","categories_create","categories_update","categories_retrieve","categories_delete","orders_create","orders_update","orders_retrieve","orders_delete"]
+    },
+    {
+        "role": "customer",
+        "actions": ["products_retrieve","categories_retrieve","orders_create","orders_update","orders_retrieve"]
+    },
+    {
+        "role": "product",
+        "actions": ["products_create","products_update","products_retrieve","products_delete","categories_create","categories_update","categories_retrieve","categories_delete"]
+    },
+    {
+        "role": "order",
+        "actions": ["customers_retrieve","products_retrieve","categories_retrieve","orders_create","orders_update","orders_retrieve","orders_delete"]
+    }
+]

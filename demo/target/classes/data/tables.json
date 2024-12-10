@@ -1,0 +1,8 @@
+{
+    "admins": "src/main/resources/data/admins.json",
+    "customers": "src/main/resources/data/customers.json",
+    "orders": "src/main/resources/data/orders.json",
+    "products": "src/main/resources/data/products.json",
+    "categories": "src/main/resources/data/categories.json",
+    "permissons": "src/main/resources/data/permissons.json"
+}

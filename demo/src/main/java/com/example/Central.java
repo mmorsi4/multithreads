@@ -2,6 +2,7 @@ package com.example;
 
 import java.util.Stack;
 
+import Services.*;
 import javafx.application.Application;
 import javafx.geometry.*;
 import javafx.scene.Cursor;
@@ -16,14 +17,54 @@ import javafx.scene.paint.*;
 
 public class Central extends Application {
     private Stage primaryStage;
+    private AuthService auth = new AuthService(null,null);
+    private PermissionService permission = new PermissionService(auth);
+    private AdminService adminService = new AdminService(auth,permission);
+    private CategoryService categoryService = new CategoryService(auth,permission);
+    private ProductService productService = new ProductService(auth,permission,categoryService);
+    private CustomerService customerService = new CustomerService(auth,permission,productService,null);
+    private OrderService orderService = new OrderService(auth,permission,productService,customerService);
 
     @Override
     public void start(Stage primaryStage) {
+        auth.setCustomerService(customerService);
+        auth.setAdminService(adminService);
+        customerService.setOrderService(orderService);
+
+        showLoginPage(); // Start with Scene 1
+
         this.primaryStage = primaryStage;
         primaryStage.setResizable(false);
-        showLoginPage(); // Start with Scene 1
         primaryStage.setTitle("Multithreads");
         primaryStage.show();
+    }
+
+    public AdminService getAdminService() {
+        return adminService;
+    }
+
+    public AuthService getAuth() {
+        return auth;
+    }
+
+    public CategoryService getCategoryService() {
+        return categoryService;
+    }
+
+    public CustomerService getCustomerService() {
+        return customerService;
+    }
+
+    public OrderService getOrderService() {
+        return orderService;
+    }
+
+    public PermissionService getPermission() {
+        return permission;
+    }
+
+    public ProductService getProductService() {
+        return productService;
     }
 
     public void showLoginPage() {

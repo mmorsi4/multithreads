@@ -12,6 +12,7 @@ import javafx.scene.text.*;
 import javafx.scene.paint.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 public class RegisterPage {
     private final Central mainApp;
