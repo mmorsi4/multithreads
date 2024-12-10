@@ -1,4 +1,4 @@
-package com.example;
+package example;
 
 import java.util.Stack;
 
@@ -15,11 +15,11 @@ import javafx.scene.layout.*;
 import javafx.scene.text.*;
 import javafx.scene.paint.*;
 
-public class AdminUsersPage {
+public class AdminCategoriesPage {
 
     private final Central mainApp;
 
-    public AdminUsersPage(Central mainApp) {
+    public AdminCategoriesPage(Central mainApp) {
         this.mainApp = mainApp;
     }
 

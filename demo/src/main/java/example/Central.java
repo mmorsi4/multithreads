@@ -1,4 +1,4 @@
-package com.example;
+package example;
 
 import java.util.Stack;
 
@@ -31,12 +31,11 @@ public class Central extends Application {
         auth.setAdminService(adminService);
         customerService.setOrderService(orderService);
 
-        showLoginPage(); // Start with Scene 1
-
         this.primaryStage = primaryStage;
         primaryStage.setResizable(false);
         primaryStage.setTitle("Multithreads");
         primaryStage.show();
+        showLoginPage(); // Start with Scene 1
     }
 
     public AdminService getAdminService() {

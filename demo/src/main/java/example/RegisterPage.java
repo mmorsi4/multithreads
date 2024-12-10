@@ -1,4 +1,4 @@
-package com.example;
+package example;
 
 import javafx.application.Application;
 import javafx.geometry.*;

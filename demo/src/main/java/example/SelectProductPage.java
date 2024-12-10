@@ -1,4 +1,4 @@
-package com.example;
+package example;
 
 import javafx.geometry.*;
 import javafx.scene.Cursor;
