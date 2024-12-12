@@ -101,6 +101,16 @@ public class Central extends Application {
         primaryStage.setScene((ordersPage.getScene(primaryStage)));
     }
 
+    public void showChatListPage(){
+        ChatListPage chatlistPage = new ChatListPage(this);
+        primaryStage.setScene((chatlistPage.getScene(primaryStage)));
+    }
+
+    public void showChatPage(){
+        ChatPage chatPage = new ChatPage(this);
+        primaryStage.setScene((chatPage.getScene(primaryStage)));
+    }
+
     // Admin pages
 
     public void showAdminProductsPage() {
