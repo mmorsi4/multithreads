@@ -1,1 +1,8 @@
-[{"id":"1","name":"hoodies","description":"jjoj","products":[]}]
+[
+  {
+    "id": "1",
+    "name": "hoodies",
+    "description": "jjoj",
+    "products": []
+  }
+]

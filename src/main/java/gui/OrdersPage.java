@@ -90,7 +90,7 @@ public class OrdersPage {
 
         productButton.setCursor(Cursor.HAND);
         productButton.setOnMouseClicked(event -> {
-            mainApp.showProductPage();
+            mainApp.showProductPage(null);
         });
 
         categoryButton.setCursor(Cursor.HAND);

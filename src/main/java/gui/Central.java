@@ -124,9 +124,9 @@ public class Central extends Application {
         primaryStage.setScene(categoryPage.getScene(primaryStage));
     }
 
-    public void showProductPage() {
+    public void showProductPage(String SelectedCategory) {
         ProductPage productPage = new ProductPage(this);
-        primaryStage.setScene(productPage.getScene(primaryStage));
+        primaryStage.setScene(productPage.getScene(primaryStage, SelectedCategory));
     }
 
     public void showSelectProductPage(Product product, boolean check) {

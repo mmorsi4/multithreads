@@ -1,52 +1,346 @@
 [
-  {"id": "1", "name": "T-shirt", "description": "Casual cotton t-shirt", "price": 20.0, "categoryId": "2", "quantity": 50},
-  {"id": "2", "name": "Sneakers", "description": "Comfortable running shoes", "price": 60.0, "categoryId": "4", "quantity": 30},
-  {"id": "3", "name": "Jacket", "description": "Warm winter jacket", "price": 80.0, "categoryId": "3", "quantity": 20},
-  {"id": "4", "name": "Hoodie", "description": "Soft fleece hoodie", "price": 40.0, "categoryId": "1", "quantity": 25},
-  {"id": "5", "name": "Jeans", "description": "Slim-fit denim jeans", "price": 50.0, "categoryId": "3", "quantity": 40},
-  {"id": "6", "name": "Sandals", "description": "Beach-friendly sandals", "price": 30.0, "categoryId": "4", "quantity": 15},
-  {"id": "7", "name": "Tank Top", "description": "Breathable summer tank", "price": 15.0, "categoryId": "2", "quantity": 60},
-  {"id": "8", "name": "Formal Shoes", "description": "Leather formal shoes", "price": 90.0, "categoryId": "4", "quantity": 10},
-  {"id": "9", "name": "Cargo Pants", "description": "Utility cargo pants", "price": 55.0, "categoryId": "3", "quantity": 35},
-  {"id": "10", "name": "Graphic Tee", "description": "Printed t-shirt with cool designs", "price": 25.0, "categoryId": "2", "quantity": 45},
-  {"id": "11", "name": "Flip Flops", "description": "Casual rubber flip flops", "price": 10.0, "categoryId": "4", "quantity": 50},
-  {"id": "12", "name": "Sweater", "description": "Cozy knit sweater", "price": 60.0, "categoryId": "3", "quantity": 20},
-  {"id": "13", "name": "Track Pants", "description": "Comfortable track pants", "price": 40.0, "categoryId": "3", "quantity": 30},
-  {"id": "14", "name": "Ankle Boots", "description": "Stylish ankle boots", "price": 100.0, "categoryId": "4", "quantity": 15},
-  {"id": "15", "name": "Crop Top", "description": "Trendy crop top", "price": 18.0, "categoryId": "2", "quantity": 40},
-  {"id": "16", "name": "Raincoat", "description": "Waterproof raincoat", "price": 70.0, "categoryId": "3", "quantity": 15},
-  {"id": "17", "name": "Pullover", "description": "Classic pullover sweater", "price": 55.0, "categoryId": "1", "quantity": 20},
-  {"id": "18", "name": "Running Shoes", "description": "High-performance running shoes", "price": 85.0, "categoryId": "4", "quantity": 25},
-  {"id": "19", "name": "Vest", "description": "Lightweight vest", "price": 30.0, "categoryId": "3", "quantity": 50},
-  {"id": "20", "name": "Long Sleeve Shirt", "description": "Casual long sleeve shirt", "price": 28.0, "categoryId": "2", "quantity": 40},
-  {"id": "21", "name": "Dress Shoes", "description": "Elegant dress shoes", "price": 95.0, "categoryId": "4", "quantity": 10},
-  {"id": "22", "name": "Sweatpants", "description": "Relaxed fit sweatpants", "price": 35.0, "categoryId": "3", "quantity": 30},
-  {"id": "23", "name": "Slip-Ons", "description": "Easy-to-wear slip-ons", "price": 45.0, "categoryId": "4", "quantity": 20},
-  {"id": "24", "name": "Blazer", "description": "Sharp tailored blazer", "price": 120.0, "categoryId": "3", "quantity": 10},
-  {"id": "25", "name": "Button-Up Shirt", "description": "Formal button-up shirt", "price": 35.0, "categoryId": "2", "quantity": 50},
-  {"id": "26", "name": "Leather Jacket", "description": "Premium leather jacket", "price": 150.0, "categoryId": "3", "quantity": 15},
-  {"id": "27", "name": "High Heels", "description": "Chic high heels", "price": 110.0, "categoryId": "4", "quantity": 12},
-  {"id": "28", "name": "Chinos", "description": "Smart casual chinos", "price": 45.0, "categoryId": "3", "quantity": 35},
-  {"id": "29", "name": "Basic Tee", "description": "Essential plain t-shirt", "price": 12.0, "categoryId": "2", "quantity": 100},
-  {"id": "30", "name": "Chelsea Boots", "description": "Sleek Chelsea boots", "price": 130.0, "categoryId": "4", "quantity": 20},
-  {"id": "31", "name": "Bomber Jacket", "description": "Trendy bomber jacket", "price": 85.0, "categoryId": "3", "quantity": 15},
-  {"id": "32", "name": "Formal Pants", "description": "Tailored formal pants", "price": 60.0, "categoryId": "3", "quantity": 25},
-  {"id": "33", "name": "Graphic Hoodie", "description": "Stylish graphic hoodie", "price": 45.0, "categoryId": "1", "quantity": 30},
-  {"id": "34", "name": "Athletic Shorts", "description": "Comfortable workout shorts", "price": 25.0, "categoryId": "3", "quantity": 50},
-  {"id": "35", "name": "Slip Dress", "description": "Elegant slip dress", "price": 65.0, "categoryId": "2", "quantity": 20},
-  {"id": "36", "name": "Espadrilles", "description": "Lightweight espadrilles", "price": 40.0, "categoryId": "4", "quantity": 25},
-  {"id": "37", "name": "Peacoat", "description": "Classic wool peacoat", "price": 120.0, "categoryId": "3", "quantity": 10},
-  {"id": "38", "name": "Shorts", "description": "Casual summer shorts", "price": 30.0, "categoryId": "3", "quantity": 40},
-  {"id": "39", "name": "Knit Cap", "description": "Warm knit cap", "price": 15.0, "categoryId": "1", "quantity": 50},
-  {"id": "40", "name": "Sports Bra", "description": "Supportive sports bra", "price": 30.0, "categoryId": "2", "quantity": 35},
-  {"id": "41", "name": "Hiking Boots", "description": "Durable hiking boots", "price": 120.0, "categoryId": "4", "quantity": 20},
-  {"id": "42", "name": "Polo Shirt", "description": "Classic polo shirt", "price": 40.0, "categoryId": "2", "quantity": 50},
-  {"id": "43", "name": "Windbreaker", "description": "Lightweight windbreaker", "price": 65.0, "categoryId": "3", "quantity": 20},
-  {"id": "44", "name": "Wide-Leg Pants", "description": "Trendy wide-leg pants", "price": 55.0, "categoryId": "3", "quantity": 25},
-  {"id": "45", "name": "Crewneck Sweater", "description": "Simple crewneck sweater", "price": 35.0, "categoryId": "1", "quantity": 30},
-  {"id": "46", "name": "Moccasins", "description": "Comfortable moccasins", "price": 80.0, "categoryId": "4", "quantity": 15},
-  {"id": "47", "name": "Dress Shirt", "description": "Sharp dress shirt", "price": 50.0, "categoryId": "2", "quantity": 30},
-  {"id": "48", "name": "Overcoat", "description": "Formal overcoat", "price": 200.0, "categoryId": "3", "quantity": 8},
-  {"id": "49", "name": "Baseball Cap", "description": "Casual baseball cap", "price": 20.0, "categoryId": "1", "quantity": 60},
-  {"id": "50", "name": "Running Shorts", "description": "Light running shorts", "price": 25.0, "categoryId": "3", "quantity": 40}
+  {
+    "id": "1",
+    "name": "T-shirt",
+    "price": 20.0,
+    "categoryId": "2",
+    "quantity": 50,
+    "description": "A classic, comfortable cotton T-shirt perfect for everyday wear."
+  },
+  {
+    "id": "2",
+    "name": "Sneakers",
+    "price": 60.0,
+    "categoryId": "4",
+    "quantity": 30,
+    "description": "Stylish and comfortable sneakers suitable for casual outings or light workouts."
+  },
+  {
+    "id": "4",
+    "name": "Hoodie",
+    "price": 40.0,
+    "categoryId": "1",
+    "quantity": 25,
+    "description": "A cozy and warm hoodie, perfect for layering or chilly days."
+  },
+  {
+    "id": "5",
+    "name": "Jeans",
+    "price": 50.0,
+    "categoryId": "3",
+    "quantity": 40,
+    "description": "Durable and stylish denim jeans, a versatile addition to any wardrobe."
+  },
+  {
+    "id": "6",
+    "name": "Sandals",
+    "price": 30.0,
+    "categoryId": "4",
+    "quantity": 15,
+    "description": "Comfortable and breathable sandals, ideal for warm weather and casual wear."
+  },
+  {
+    "id": "7",
+    "name": "Tank Top",
+    "price": 15.0,
+    "categoryId": "2",
+    "quantity": 60,
+    "description": "A lightweight and breathable tank top, perfect for workouts or hot days."
+  },
+  {
+    "id": "8",
+    "name": "Formal Shoes",
+    "price": 90.0,
+    "categoryId": "4",
+    "quantity": 10,
+    "description": "Elegant leather formal shoes, perfect for special occasions or professional settings."
+  },
+  {
+    "id": "9",
+    "name": "Cargo Pants",
+    "price": 55.0,
+    "categoryId": "3",
+    "quantity": 35,
+    "description": "Functional and stylish cargo pants with ample pocket space."
+  },
+  {
+    "id": "10",
+    "name": "Graphic Tee",
+    "price": 25.0,
+    "categoryId": "2",
+    "quantity": 45,
+    "description": "A comfortable T-shirt featuring a unique and eye-catching graphic design."
+  },
+  {
+    "id": "11",
+    "name": "Flip Flops",
+    "price": 10.0,
+    "categoryId": "4",
+    "quantity": 50,
+    "description": "Simple and comfortable flip flops, perfect for the beach or casual wear."
+  },
+  {
+    "id": "13",
+    "name": "Track Pants",
+    "price": 40.0,
+    "categoryId": "3",
+    "quantity": 30,
+    "description": "Comfortable and flexible track pants, ideal for workouts or lounging."
+  },
+  {
+    "id": "14",
+    "name": "Ankle Boots",
+    "price": 100.0,
+    "categoryId": "4",
+    "quantity": 15,
+    "description": "Stylish and versatile ankle boots that can be dressed up or down."
+  },
+  {
+    "id": "15",
+    "name": "Crop Top",
+    "price": 18.0,
+    "categoryId": "2",
+    "quantity": 40,
+    "description": "A trendy and fashionable crop top, perfect for warm weather or layering."
+  },
+  {
+    "id": "16",
+    "name": "Raincoat",
+    "price": 70.0,
+    "categoryId": "3",
+    "quantity": 15,
+    "description": "A waterproof and windproof raincoat to keep you dry and comfortable in wet weather."
+  },
+  {
+    "id": "17",
+    "name": "Pullover",
+    "price": 55.0,
+    "categoryId": "1",
+    "quantity": 20,
+    "description": "A comfortable and stylish pullover, perfect for layering or cooler days."
+  },
+  {
+    "id": "18",
+    "name": "Running Shoes",
+    "price": 85.0,
+    "categoryId": "4",
+    "quantity": 25,
+    "description": "High-performance running shoes designed for comfort and support during workouts."
+  },
+  {
+    "id": "20",
+    "name": "Long Sleeve Shirt",
+    "price": 28.0,
+    "categoryId": "2",
+    "quantity": 40,
+    "description": "A versatile long sleeve shirt that can be dressed up or down."
+  },
+  {
+    "id": "21",
+    "name": "Dress Shoes",
+    "price": 95.0,
+    "categoryId": "4",
+    "quantity": 10,
+    "description": "Sophisticated dress shoes suitable for formal events and special occasions."
+  },
+  {
+    "id": "22",
+    "name": "Sweatpants",
+    "price": 35.0,
+    "categoryId": "3",
+    "quantity": 30,
+    "description": "Soft and comfortable sweatpants, perfect for lounging or casual wear."
+  },
+  {
+    "id": "23",
+    "name": "Slip-Ons",
+    "price": 45.0,
+    "categoryId": "4",
+    "quantity": 20,
+    "description": "Convenient and comfortable slip-on shoes for everyday wear."
+  },
+  {
+    "id": "24",
+    "name": "Blazer",
+    "price": 120.0,
+    "categoryId": "3",
+    "quantity": 10,
+    "description": "A stylish and sophisticated blazer that can elevate any outfit."
+  },
+  {
+    "id": "25",
+    "name": "Button-Up Shirt",
+    "price": 35.0,
+    "categoryId": "2",
+    "quantity": 50,
+    "description": "A classic button-up shirt suitable for both casual and formal occasions."
+  },
+  {
+    "id": "27",
+    "name": "High Heels",
+    "price": 110.0,
+    "categoryId": "4",
+    "quantity": 12,
+    "description": "Elegant high heels that add a touch of sophistication to any outfit."
+  },
+  {
+    "id": "28",
+    "name": "Chinos",
+    "price": 45.0,
+    "categoryId": "3",
+    "quantity": 35,
+    "description": "Versatile and comfortable chinos, a great alternative to jeans."
+  },
+  {
+    "id": "29",
+    "name": "Basic Tee",
+    "price": 12.0,
+    "categoryId": "2",
+    "quantity": 100,
+    "description": "An essential basic tee, perfect for layering or wearing on its own."
+  },
+  {
+    "id": "30",
+    "name": "Chelsea Boots",
+    "price": 130.0,
+    "categoryId": "4",
+    "quantity": 20,
+    "description": "Stylish and timeless Chelsea boots that can be dressed up or down."
+  },
+  {
+    "id": "32",
+    "name": "Formal Pants",
+    "price": 60.0,
+    "categoryId": "3",
+    "quantity": 25,
+    "description": "Elegant formal pants suitable for professional settings or special occasions."
+  },
+  {
+    "id": "33",
+    "name": "Graphic Hoodie",
+    "price": 45.0,
+    "categoryId": "1",
+    "quantity": 30,
+    "description": "A comfortable hoodie featuring a unique and stylish graphic design."
+  },
+  {
+    "id": "34",
+    "name": "Athletic Shorts",
+    "price": 25.0,
+    "categoryId": "3",
+    "quantity": 50,
+    "description": "Lightweight and breathable athletic shorts, perfect for workouts or activewear."
+  },
+  {
+    "id": "35",
+    "name": "Slip Dress",
+    "price": 65.0,
+    "categoryId": "2",
+    "quantity": 20,
+    "description": "A stylish and comfortable slip dress, perfect for a night out or special occasion."
+  },
+  {
+    "id": "36",
+    "name": "Espadrilles",
+    "price": 40.0,
+    "categoryId": "4",
+    "quantity": 25,
+    "description": "Comfortable and stylish espadrilles, perfect for warm weather and casual outings."
+  },
+  {
+    "id": "37",
+    "name": "Peacoat",
+    "price": 120.0,
+    "categoryId": "3",
+    "quantity": 10,
+    "description": "A classic and stylish peacoat, perfect for staying warm and fashionable in colder weather."
+  },
+  {
+    "id": "38",
+    "name": "Shorts",
+    "price": 30.0,
+    "categoryId": "3",
+    "quantity": 40,
+    "description": "Comfortable and versatile shorts, suitable for a variety of occasions."
+  },
+  {
+    "id": "39",
+    "name": "Knit Cap",
+    "price": 15.0,
+    "categoryId": "1",
+    "quantity": 50,
+    "description": "A warm and cozy knit cap, perfect for keeping your head warm in cold weather."
+  },
+  {
+    "id": "41",
+    "name": "Hiking Boots",
+    "price": 120.0,
+    "categoryId": "4",
+    "quantity": 20,
+    "description": "Durable and supportive hiking boots designed for outdoor adventures."
+  },
+  {
+    "id": "42",
+    "name": "Polo Shirt",
+    "price": 40.0,
+    "categoryId": "2",
+    "quantity": 50,
+    "description": "A classic and versatile polo shirt, suitable for both casual and smart-casual occasions."
+  },
+  {
+    "id": "43",
+    "name": "Windbreaker",
+    "price": 65.0,
+    "categoryId": "3",
+    "quantity": 20,
+    "description": "A lightweight and water-resistant windbreaker, perfect for outdoor activities."
+  },
+  {
+    "id": "44",
+    "name": "Wide-Leg Pants",
+    "price": 55.0,
+    "categoryId": "3",
+    "quantity": 25,
+    "description": "Stylish and comfortable wide-leg pants, a fashionable alternative to traditional trousers."
+  },
+  {
+    "id": "45",
+    "name": "Crewneck Sweater",
+    "price": 35.0,
+    "categoryId": "1",
+    "quantity": 30,
+    "description": "A classic and comfortable crewneck sweater, perfect for layering or wearing on its own."
+  },
+  {
+    "id": "46",
+    "name": "Moccasins",
+    "price": 80.0,
+    "categoryId": "4",
+    "quantity": 15,
+    "description": "Comfortable and stylish moccasins, perfect for casual wear or lounging."
+  },
+  {
+    "id": "47",
+    "name": "Dress Shirt",
+    "price": 50.0,
+    "categoryId": "2",
+    "quantity": 30,
+    "description": "A sophisticated dress shirt, perfect for formal occasions or professional settings."
+  },
+  {
+    "id": "49",
+    "name": "Baseball Cap",
+    "price": 20.0,
+    "categoryId": "1",
+    "quantity": 60,
+    "description": "A classic baseball cap, perfect for adding a sporty touch to any outfit."
+  },
+  {
+    "id": "50",
+    "name": "Running Shorts",
+    "price": 25.0,
+    "categoryId": "3",
+    "quantity": 40,
+    "description": "Lightweight and breathable running shorts designed for optimal performance during workouts."
+  }
 ]

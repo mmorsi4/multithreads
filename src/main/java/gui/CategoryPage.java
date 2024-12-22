@@ -73,7 +73,7 @@ public class CategoryPage {
 
         productButton.setCursor(Cursor.HAND);
         productButton.setOnMouseClicked(event -> {
-            mainApp.showProductPage();
+            mainApp.showProductPage(null);
         });
 
         categoryButton.setCursor(Cursor.HAND);
@@ -182,6 +182,8 @@ public class CategoryPage {
         xImageView.setCursor(Cursor.HAND);
         xImageView.setOnMouseClicked(event -> {
             System.out.println("Clicked on x!");
+            mainApp.showProductPage("Hoodies");
+
 
         });
 
@@ -189,18 +191,21 @@ public class CategoryPage {
         yImageView.setCursor(Cursor.HAND);
         yImageView.setOnMouseClicked(event -> {
             System.out.println("Clicked on y!"); // Replace with desired action
+            mainApp.showProductPage(("T-Shirts"));
         });
 
         // For zImageView
         zImageView.setCursor(Cursor.HAND);
         zImageView.setOnMouseClicked(event -> {
             System.out.println("Clicked on z!"); // Replace with desired action
+            mainApp.showProductPage(("Trousers"));
         });
 
         // For mImageView
         mImageView.setCursor(Cursor.HAND);
         mImageView.setOnMouseClicked(event -> {
             System.out.println("Clicked on m!"); // Replace with desired action
+            mainApp.showProductPage(("Shoes"));
         });
 
 

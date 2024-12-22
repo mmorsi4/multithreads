@@ -54,7 +54,7 @@ public class SelectProductPage {
 
     private HBox createNavbar(ImageView logoView) {
         Text cartButton = createNavButton("CART", () -> mainApp.showCartPage());
-        Text productButton = createNavButton("PRODUCTS", () -> mainApp.showProductPage());
+        Text productButton = createNavButton("PRODUCTS", () -> mainApp.showProductPage(null));
         Text categoryButton = createNavButton("CATEGORIES", () -> mainApp.showCategoryPage());
         Text ordersButton = createNavButton("ORDERS", () -> mainApp.showOrdersPage());
         Text chatButton = createNavButton("CHAT", () -> mainApp.showChatListPage());
@@ -125,7 +125,7 @@ public class SelectProductPage {
         returnButton.setCursor(Cursor.HAND);
         returnButton.setOnAction(e -> {
             if (!productorCart) {
-                mainApp.showProductPage();
+                mainApp.showProductPage(null);
             } else {
                 mainApp.showCartPage();
             }

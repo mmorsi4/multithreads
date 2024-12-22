@@ -92,7 +92,7 @@ public class ChatListPage {
             if (mainApp.getAuth().getLoggedInUser() instanceof Admin) {
                 mainApp.showAdminProductsPage();
             }else{
-                mainApp.showProductPage();
+                mainApp.showProductPage(null);
             } 
         });
 
