@@ -11,17 +11,27 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.*;
 import javafx.stage.Stage;
+
+import java.io.File;
+
 import Entity.Product;
 
 public class SelectProductPage {
     private final Central mainApp;
-    private final Product product; // The product to display
+    private Product product; // Now used to store the refetched product
     private final boolean productorCart;
 
-    public SelectProductPage(Central mainApp, Product product, boolean check) {
+    public SelectProductPage(Central mainApp, Product originalProduct, boolean check) {
         this.mainApp = mainApp;
-        this.product = product; // Pass the selected product
-        this.productorCart = check; // Instance variable to avoid static misuse
+        this.productorCart = check;
+
+        // Refetch the product from the database using the original product's ID
+        this.product = mainApp.getProductService().get(originalProduct.getId());
+        if (this.product == null) {
+            // Handle the case where the product might have been deleted
+            System.err.println("Error: Product not found!");
+            // You might want to redirect back to the product list or show an error message
+        }
     }
 
     public Scene getScene(Stage stage) {
@@ -30,14 +40,63 @@ public class SelectProductPage {
         BorderPane bp = new BorderPane();
         bp.setStyle("-fx-background-color: black;");
 
-        // Navigation bar
+        // Navigation Bar
         Image logo = new Image(getClass().getResource("/assets/multithreadsLogo.png").toExternalForm());
-        ImageView logoView = createImageView(logo, 85);
+        ImageView logoView = new ImageView(logo);
+        logoView.setFitWidth(85);
+        logoView.setPreserveRatio(true);
 
-        HBox navbar = createNavbar(logoView);
-        bp.setTop(navbar);
+        Text cartButton = new Text("CART");
+        cartButton.setFill(Color.WHITE);
+        cartButton.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
+        Text productButton = new Text("PRODUCTS");
+        productButton.setFill(Color.WHITE);
+        productButton.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
+        Text categoryButton = new Text("CATEGORIES");
+        categoryButton.setFill(Color.WHITE);
+        categoryButton.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
+        Text ordersButton = new Text("ORDERS");
+        ordersButton.setFill(Color.WHITE);
+        ordersButton.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
+        Text chatButton = new Text("CHAT");
+        chatButton.setFill(Color.WHITE);
+        chatButton.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
 
-        // Product Details Layout
+        HBox controlBox = new HBox(40);
+        controlBox.setAlignment(Pos.CENTER);
+        controlBox.getChildren().addAll(productButton, categoryButton, cartButton, ordersButton, chatButton);
+
+        HBox navbar = new HBox(50);
+        navbar.getChildren().addAll(logoView, controlBox);
+        navbar.setStyle("-fx-background-color: black;");
+        navbar.setAlignment(Pos.CENTER_LEFT);
+        navbar.setPadding(new Insets(15, 15, 15, 15));
+
+        Image navbarDeco = new Image(getClass().getResource("/assets/navDeco.png").toExternalForm());
+        ImageView navbarDecoView = new ImageView(navbarDeco);
+        VBox barAndDeco = new VBox();
+        barAndDeco.getChildren().addAll(navbar, navbarDecoView);
+        bp.setTop(barAndDeco);
+
+        // Navigation Actions
+        productButton.setCursor(Cursor.HAND);
+        productButton.setOnMouseClicked(event -> mainApp.showProductPage(null));
+        categoryButton.setCursor(Cursor.HAND);
+        categoryButton.setOnMouseClicked(event -> mainApp.showCategoryPage());
+        cartButton.setCursor(Cursor.HAND);
+        cartButton.setOnMouseClicked(event -> mainApp.showCartPage());
+        ordersButton.setCursor(Cursor.HAND);
+        ordersButton.setOnMouseClicked(event -> mainApp.showOrdersPage());
+        chatButton.setCursor(Cursor.HAND);
+        chatButton.setOnMouseClicked(event -> mainApp.showChatListPage());
+        logoView.setCursor(Cursor.HAND);
+        logoView.setOnMouseClicked(event -> {
+            mainApp.getAuth().Logout();
+            mainApp.showLoginPage();
+        });
+
+
+        // Product Details Layout (Updated to use the refetched product)
         HBox productLayout = createProductLayout();
         bp.setCenter(productLayout);
 
@@ -52,30 +111,9 @@ public class SelectProductPage {
         return new Scene(stackPane, 1366, 768);
     }
 
-    private HBox createNavbar(ImageView logoView) {
-        Text cartButton = createNavButton("CART", () -> mainApp.showCartPage());
-        Text productButton = createNavButton("PRODUCTS", () -> mainApp.showProductPage(null));
-        Text categoryButton = createNavButton("CATEGORIES", () -> mainApp.showCategoryPage());
-        Text ordersButton = createNavButton("ORDERS", () -> mainApp.showOrdersPage());
-        Text chatButton = createNavButton("CHAT", () -> mainApp.showChatListPage());
-
-        logoView.setOnMouseClicked(event -> {
-            mainApp.getAuth().Logout();
-            mainApp.showLoginPage();
-        });
-
-        HBox controlBox = new HBox(40, productButton, categoryButton, cartButton, ordersButton, chatButton);
-        controlBox.setAlignment(Pos.CENTER);
-
-        HBox navbar = new HBox(50, logoView, controlBox);
-        navbar.setStyle("-fx-background-color: black;");
-        navbar.setPadding(new Insets(15));
-        return navbar;
-    }
-
     private HBox createProductLayout() {
-        Image productImage = loadImage(product.getImage(), "/assets/m.png"); // Load product image or fallback
-        ImageView productImageView = createImageView(productImage, 350);
+        Image productImage = loadImage(product.getImage(), "/assets/m.png", false); // Load product image or fallback
+        ImageView productImageView = createImageView(productImage, 500);
 
         VBox productInfo = new VBox(20);
         productInfo.setAlignment(Pos.CENTER_LEFT);
@@ -83,7 +121,7 @@ public class SelectProductPage {
                 createText(product.getName(), 24, true, Color.WHITE),
                 createText(product.getDescription(), 16, false, Color.WHITE),
                 createText(product.getPrice() + " EGP", 20, true, Color.WHITE),
-                createText("Quantity in Stock: " + product.getQuantity(), 16, false, Color.WHITE),
+                createText("Quantity in Stock: " + product.getQuantity(), 16, false, Color.WHITE), // Now using the refetched product's quantity
                 createAddToCartButton()
         );
 
@@ -116,7 +154,7 @@ public class SelectProductPage {
     }
 
     private Button createReturnButton() {
-        Image returnImage = loadImage("/assets/back-button.png", "/assets/back-button.png");
+        Image returnImage = loadImage("/assets/back-button.png", "/assets/back-button.png", true);
         ImageView returnImageView = createImageView(returnImage, 40);
 
         Button returnButton = new Button();
@@ -133,15 +171,6 @@ public class SelectProductPage {
         return returnButton;
     }
 
-    private Text createNavButton(String text, Runnable action) {
-        Text navButton = new Text(text);
-        navButton.setFill(Color.WHITE);
-        navButton.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
-        navButton.setCursor(Cursor.HAND);
-        navButton.setOnMouseClicked(e -> action.run());
-        return navButton;
-    }
-
     private ImageView createImageView(Image image, double width) {
         ImageView imageView = new ImageView(image);
         imageView.setFitWidth(width);
@@ -149,9 +178,10 @@ public class SelectProductPage {
         return imageView;
     }
 
-    private Image loadImage(String path, String fallback) {
+    private Image loadImage(String path, String fallback, boolean isReturn) {
         try {
-            return new Image(getClass().getResourceAsStream(path));
+            if(isReturn) return new Image(getClass().getResourceAsStream(path));
+            return new Image(new File(path).toURI().toString());
         } catch (Exception e) {
             System.err.println("Error loading image, using fallback: " + fallback);
             return new Image(getClass().getResourceAsStream(fallback));

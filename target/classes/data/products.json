@@ -1,1 +1,182 @@
-[{"id":"1","name":"White Hoodie","description":"A white hoodie for a clean and classic look.","image":"C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\whitehoodie.png","price":10.0,"categoryId":"1","quantity":30},{"id":"2","name":"Blue Hoodie","description":"A cozy blue hoodie for everyday comfort.","image":"C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\bluehoodie.png","price":45.0,"categoryId":"1","quantity":25},{"id":"3","name":"Pink Hoodie","description":"A vibrant pink hoodie to brighten your wardrobe.","image":"C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\pinkhoodie.png","price":50.0,"categoryId":"1","quantity":20},{"id":"4","name":"MS Hoodie","description":"An MS hoodie with a sleek and modern design.","image":"C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\mshoodie.png","price":55.0,"categoryId":"1","quantity":15},{"id":"6","name":"Mahmoud T-shirt","description":"A versatile T-shirt inspired by Mahmoud\u0027s signature style.","image":"C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\mahmoudshirt.png","price":20.0,"categoryId":"2","quantity":50},{"id":"7","name":"T-shirt T-shirt","description":"A classic and comfortable T-shirt for everyday wear.","image":"C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\tshirtshirt.png","price":22.0,"categoryId":"2","quantity":45},{"id":"8","name":"Bantalon T-shirt","description":"A unique T-shirt named after Bantalon.","image":"C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\bantalonshirt.png","price":25.0,"categoryId":"2","quantity":40},{"id":"9","name":"Orange T-shirt","description":"A bright orange T-shirt for a bold statement.","image":"C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\orangeshirt.png","price":28.0,"categoryId":"2","quantity":4},{"id":"10","name":"Green T-shirt","description":"A calming green T-shirt perfect for casual outings.","image":"C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\greenshirt.png","price":15.0,"categoryId":"2","quantity":60},{"id":"11","name":"Beige Trousers","description":"Stylish beige trousers suitable for any occasion.","image":"C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\beigepants.png","price":50.0,"categoryId":"3","quantity":30},{"id":"12","name":"Black Trousers","description":"Classic black trousers for a formal look.","image":"C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\blackpants.png","price":40.0,"categoryId":"3","quantity":45},{"id":"13","name":"Sweatpants","description":"Comfortable sweatpants for lounging or exercise.","image":"C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\sweatpants.png","price":35.0,"categoryId":"3","quantity":40},{"id":"14","name":"Light Jeans","description":"Trendy light jeans perfect for a casual look.","image":"C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\lightjeanspants.png","price":55.0,"categoryId":"3","quantity":35},{"id":"15","name":"Dark Jeans","description":"Sophisticated dark jeans suitable for multiple occasions.","image":"C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\jeanspants.png","price":60.0,"categoryId":"3","quantity":20},{"id":"16","name":"Red Shoes","description":"Bold red shoes that make a statement.","image":"C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\redshoes.png","price":85.0,"categoryId":"4","quantity":25},{"id":"17","name":"Black Shoes","description":"Classic black shoes for any occasion.","image":"C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\blackshoes.png","price":60.0,"categoryId":"4","quantity":40},{"id":"18","name":"Khaki Shoes","description":"Stylish khaki shoes for outdoor adventures.","image":"C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\khakishoes.png","price":120.0,"categoryId":"4","quantity":20},{"id":"19","name":"Gray Shoes","description":"Neutral gray shoes that pair with everything.","image":"C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\grayshoes.png","price":45.0,"categoryId":"4","quantity":30},{"id":"20","name":"Pink Shoes","description":"Vibrant pink shoes to add flair to your outfit.","image":"C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\pinkshoes.png","price":90.0,"categoryId":"4","quantity":15}]
+[
+    {
+        "id": "1",
+        "name": "White Hoodie",
+        "description": "A white hoodie for a clean and classic look.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\whitehoodie.png",
+        "price": 10.0,
+        "categoryId": "1",
+        "quantity": 30
+    },
+    {
+        "id": "2",
+        "name": "Blue Hoodie",
+        "description": "A cozy blue hoodie for everyday comfort.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\bluehoodie.png",
+        "price": 45.0,
+        "categoryId": "1",
+        "quantity": 25
+    },
+    {
+        "id": "3",
+        "name": "Pink Hoodie",
+        "description": "A vibrant pink hoodie to brighten your wardrobe.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\pinkhoodie.png",
+        "price": 50.0,
+        "categoryId": "1",
+        "quantity": 20
+    },
+    {
+        "id": "4",
+        "name": "MS Hoodie",
+        "description": "An MS hoodie with a sleek and modern design.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\mshoodie.png",
+        "price": 850.0,
+        "categoryId": "1",
+        "quantity": 15
+    },
+    {
+        "id": "5",
+        "name": "Stylish Hoodie",
+        "description": "A trendy hoodie.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\gadeethoodie.png",
+        "price": 60.0,
+        "categoryId": "1",
+        "quantity": 20
+    },
+    {
+        "id": "6",
+        "name": "Mahmoud T-shirt",
+        "description": "A versatile T-shirt inspired by Mahmoud's signature style.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\mahmoudshirt.png",
+        "price": 20.0,
+        "categoryId": "2",
+        "quantity": 50
+    },
+    {
+        "id": "7",
+        "name": "T-shirt T-shirt",
+        "description": "A classic and comfortable T-shirt for everyday wear.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\tshirtshirt.png",
+        "price": 22.0,
+        "categoryId": "2",
+        "quantity": 45
+    },
+    {
+        "id": "8",
+        "name": "Bantalon T-shirt",
+        "description": "A unique T-shirt named after Bantalon.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\bantalonshirt.png",
+        "price": 25.0,
+        "categoryId": "2",
+        "quantity": 40
+    },
+    {
+        "id": "9",
+        "name": "Orange T-shirt",
+        "description": "A bright orange T-shirt for a bold statement.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\orangeshirt.png",
+        "price": 28.0,
+        "categoryId": "2",
+        "quantity": 4
+    },
+    {
+        "id": "10",
+        "name": "Green T-shirt",
+        "description": "A calming green T-shirt perfect for casual outings.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\greenshirt.png",
+        "price": 15.0,
+        "categoryId": "2",
+        "quantity": 60
+    },
+    {
+        "id": "11",
+        "name": "Beige Trousers",
+        "description": "Stylish beige trousers suitable for any occasion.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\beigerpants.png",
+        "price": 50.0,
+        "categoryId": "3",
+        "quantity": 30
+    },
+    {
+        "id": "12",
+        "name": "Black Trousers",
+        "description": "Classic black trousers for a formal look.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\blackpants.png",
+        "price": 40.0,
+        "categoryId": "3",
+        "quantity": 45
+    },
+    {
+        "id": "13",
+        "name": "Sweatpants",
+        "description": "Comfortable sweatpants for lounging or exercise.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\beigepants.png",
+        "price": 35.0,
+        "categoryId": "3",
+        "quantity": 40
+    },
+    {
+        "id": "14",
+        "name": "Light Jeans",
+        "description": "Trendy light jeans perfect for a casual look.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\lightjeanspants.png",
+        "price": 55.0,
+        "categoryId": "3",
+        "quantity": 35
+    },
+    {
+        "id": "15",
+        "name": "Dark Jeans",
+        "description": "Sophisticated dark jeans suitable for multiple occasions.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\jeanspants.png",
+        "price": 60.0,
+        "categoryId": "3",
+        "quantity": 20
+    },
+    {
+        "id": "16",
+        "name": "Red Shoes",
+        "description": "Bold red shoes that make a statement.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\redshoes.png",
+        "price": 85.0,
+        "categoryId": "4",
+        "quantity": 25
+    },
+    {
+        "id": "17",
+        "name": "Black Shoes",
+        "description": "Classic black shoes for any occasion.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\blackshoes.png",
+        "price": 60.0,
+        "categoryId": "4",
+        "quantity": 40
+    },
+    {
+        "id": "18",
+        "name": "Khaki Shoes",
+        "description": "Stylish khaki shoes for outdoor adventures.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\khakishoes.png",
+        "price": 120.0,
+        "categoryId": "4",
+        "quantity": 20
+    },
+    {
+        "id": "19",
+        "name": "Gray Shoes",
+        "description": "Neutral gray shoes that pair with everything.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\grayshoes.png",
+        "price": 45.0,
+        "categoryId": "4",
+        "quantity": 30
+    },
+    {
+        "id": "20",
+        "name": "Pink Shoes",
+        "description": "Vibrant pink shoes to add flair to your outfit.",
+        "image": "C:\\main\\Computer Engineering\\Level 3\\Advanced programming\\projects\\multithreads\\src\\main\\resources\\assets\\pinkshoes.png",
+        "price": 90.0,
+        "categoryId": "4",
+        "quantity": 15
+    }
+]

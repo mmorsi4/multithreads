@@ -9,21 +9,25 @@ public class Product implements Entity, Comparable<Product> {
     private String categoryId;
     private int quantity;
 
+    // Constructor with quantity as a parameter
     public Product(String id, String name, String desc, String image, double price, String categoryId, int quantity) {
         setId(id);
         setName(name);
         setDescription(desc);
+        setImage(image);
         setPrice(price);
         setCategoryId(categoryId);
-        setQuantity(quantity);
+        setQuantity(quantity); // Ensure quantity is set properly
     }
 
+    // Constructor for when quantity is not passed, defaulting it to 1
     public Product(String id, String name, String desc, String image, double price, String categoryId) {
-        this(id, name, desc, image, price, categoryId,1);
+        this(id, name, desc, image, price, categoryId, 1); // Default quantity to 1
     }
 
-    public Product(Product product){
-        this(product.id, product.name, product.description, product.image, product.price, product.categoryId);
+    // Copy constructor
+    public Product(Product product) {
+        this(product.id, product.name, product.description, product.image, product.price, product.categoryId, product.quantity);
     }
 
     public String getId() {
@@ -86,7 +90,6 @@ public class Product implements Entity, Comparable<Product> {
                 throw new IllegalArgumentException("Category Id cannot be Empty.");
             }
         }
-        
         this.categoryId = categoryId;
     }
 

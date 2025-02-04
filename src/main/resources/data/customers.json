@@ -1,1 +1,42 @@
-[{"balance":979.0,"gender":"male","interests":[],"cartId":"9","username":"mahmoud","password":"mahmoud2005","role":"customer","dateOfBirth":"Dec 26, 2005, 12:00:00 AM"},{"balance":100.0,"gender":"male","interests":[],"cartId":"5","username":"shehabtest7","password":"12345678","role":"customer","dateOfBirth":"Nov 7, 2006, 12:00:00 AM"},{"balance":1000.0,"gender":"male","interests":[],"cartId":"12","username":"omar","password":"Omar2005","role":"customer","dateOfBirth":"Oct 10, 2005, 12:00:00 AM"}]
+[
+    {
+        "balance": 979.0,
+        "gender": "male",
+        "interests": [],
+        "cartId": "9",
+        "username": "mahmoud",
+        "password": "mahmoud2005",
+        "role": "customer",
+        "dateOfBirth": "Dec 26, 2005, 12:00:00 AM"
+    },
+    {
+        "balance": 100.0,
+        "gender": "male",
+        "interests": [],
+        "cartId": "5",
+        "username": "shehabtest7",
+        "password": "12345678",
+        "role": "customer",
+        "dateOfBirth": "Nov 7, 2006, 12:00:00 AM"
+    },
+    {
+        "balance": 1000.0,
+        "gender": "male",
+        "interests": [],
+        "cartId": "12",
+        "username": "omar",
+        "password": "Omar2005",
+        "role": "customer",
+        "dateOfBirth": "Oct 10, 2005, 12:00:00 AM"
+    },
+    {
+        "balance": 1000.0,
+        "gender": "male",
+        "interests": [],
+        "cartId": "13",
+        "username": "soheil",
+        "password": "P@ssw0rd",
+        "role": "customer",
+        "dateOfBirth": "Oct 11, 1998, 12:00:00 AM"
+    }
+]

@@ -12,6 +12,7 @@ import javafx.scene.layout.*;
 import javafx.scene.text.*;
 import javafx.scene.paint.*;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -241,8 +242,7 @@ public class ProductPage {
     private VBox createProductBox(Product product) {
         Image productImage;
         try {
-            System.out.println(product.getImage());
-            productImage = new Image(getClass().getResourceAsStream(product.getImage()));
+            productImage = new Image(new File(product.getImage()).toURI().toString()); 
         } catch (Exception e) {
             productImage = new Image(getClass().getResourceAsStream("/assets/m.png"));
         }

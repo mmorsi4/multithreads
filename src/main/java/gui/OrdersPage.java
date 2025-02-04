@@ -168,7 +168,6 @@ public class OrdersPage {
         // this changes the color and this is the only thing i understand lol
         tableView.setRowFactory(tv -> {
             TableRow<Order> row = new TableRow<>();
-            row.setStyle("-fx-background-color: grey; -fx-text-fill: white;");
             return row;
         });
 
